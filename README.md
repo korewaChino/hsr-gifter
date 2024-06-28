@@ -42,5 +42,12 @@ After getting the cookie, you can redeem a gift code by running the following co
 hsr-redeemer --cookie <cookie> --uid <UID> <gift-code>
 ```
 
+Here's an example of a shell script wrapper I use to redeem gift codes (uses [konpeito](https://github.com/tau-OS/konpeito) for secrets management inside the keyring):
+```sh
+#!/bin/bash
+
+exec env GAME_UID="$(konp get hsr_uid)" hsr-gifter --cookie="$(konp get hsr_cookie)" $@
+```
+
 Replace `<cookie>` with the cookie string you copied and `<gift-code>` with the gift code you want to redeem, or omit the `--cookie` option and set the `COOKIE` environment variable instead.
 
