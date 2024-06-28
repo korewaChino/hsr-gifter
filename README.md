@@ -14,8 +14,8 @@ Why Rust? Because why not? If you'd like to rewrite this in a language you think
 ## TODOs
 
 - [ ] Add support for other regions
-- [ ] Add support for multiple gift codes (should be easy to do with iterators)
-- [ ] Add support for reading gift codes from a file
+- [x] Add support for multiple gift codes (should be easy to do with iterators)
+- [x] Add support for reading gift codes from a file (Use stdin for this and pipe file to the program)
 - [ ] Read cookies from a file instead of using an environment variable or command line option, or even from the browser directly
 - [ ] Read UID from a file
 
